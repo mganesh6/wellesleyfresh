@@ -7,6 +7,7 @@ import requests
 from datetime import date
 
 
+
 @app.route("/<dininghall>")
 def get_menu(dininghall):
 	dd = date.today().day
@@ -60,4 +61,4 @@ def menu_of_the_day(hall, mm, dd):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host = '0.0.0.0', port = 80)
